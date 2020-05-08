@@ -1,0 +1,31 @@
+spring:
+  # 配置数据源
+  datasource:
+    # mysql数据库是bigdata
+    url: jdbc:mysql://39.97.228.138:3306/bigdata?serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: zhw06100416
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #初始化大小
+      initialSize: 5
+      #最小值
+      minIdle: 5
+      #最大值
+      maxActive: 20
+      #最大等待时间，配置获取连接等待超时，时间单位都是毫秒ms
+      maxWait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接
+      timeBetweenEvictionRunsMillis: 60000
+
+
+
+# mybatis配置文件
+mybatis:
+  # 配置别名
+  type-aliases-package: hut.hut.pojo
+  # 支持驼峰命名转换
+  configuration:
+    map-underscore-to-camel-case: true
+
